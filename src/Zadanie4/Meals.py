@@ -26,4 +26,12 @@ class Meals:
             meal = requests.get(link + name)
             return meal.json()['meals'][0]['strInstructions']
 
+    def get_meal_picture(self, name):
+        if not isinstance(name, str):
+            raise TypeError
+        else:
+            link = "https://www.themealdb.com/api/json/v1/1/search.php?s="
+            meal = requests.get(link + name)
+            return meal.json()['meals'][0]['strMealThumb']
+
 
