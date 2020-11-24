@@ -27,6 +27,10 @@ class TestMeal(unittest.TestCase):
         category = "Vegetarian"
         self.assertEqual(self.temp.get_meal_category('Arrabiata'), category)
 
+    def test_get_meal_area(self):
+        area = "Italian"
+        self.assertEqual(self.temp.get_meal_area('Arrabiata'), area)
+
 
     def tearDown(self):
         self.temp = None
