@@ -23,7 +23,9 @@ class TestMeal(unittest.TestCase):
         ytLint = "https://www.youtube.com/watch?v=1IszT_guI08"
         self.assertEqual(self.temp.get_yt_link('Arrabiata'), ytLint)
 
-
+    def test_get_meal_category(self):
+        category = "Vegetarian"
+        self.assertEqual(self.temp.get_meal_category('Arrabiata'), category)
 
 
     def tearDown(self):
