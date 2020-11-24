@@ -31,6 +31,24 @@ class TestMeal(unittest.TestCase):
         area = "Italian"
         self.assertEqual(self.temp.get_meal_area('Arrabiata'), area)
 
+    def test_instructions_exception(self):
+        self.assertRaises(TypeError, self.temp.get_instructions, 1)
+
+    def test_picture_exception(self):
+        self.assertRaises(TypeError, self.temp.get_meal_picture, 2)
+
+    def test_tags_exception(self):
+        self.assertRaises(TypeError, self.temp.get_meal_tags, 3)
+
+    def test_yt_link_exception(self):
+        self.assertRaises(TypeError, self.temp.get_yt_link, True)
+
+    def test_category_exception(self):
+        self.assertRaises(TypeError, self.temp.get_meal_category, False)
+
+    def test_area_exception(self):
+        self.assertRaises(TypeError, self.temp.get_meal_area, None)
+
 
     def tearDown(self):
         self.temp = None
