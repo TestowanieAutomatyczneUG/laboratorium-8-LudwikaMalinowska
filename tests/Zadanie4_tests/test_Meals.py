@@ -15,6 +15,10 @@ class TestMeal(unittest.TestCase):
         pictureLink = "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"
         self.assertEqual(self.temp.get_meal_picture('Arrabiata'), pictureLink)
 
+    def test_get_meal_tags(self):
+        tags = "Pasta,Curry"
+        self.assertEqual(self.temp.get_meal_tags('Arrabiata'), tags)
+
 
     def tearDown(self):
         self.temp = None
