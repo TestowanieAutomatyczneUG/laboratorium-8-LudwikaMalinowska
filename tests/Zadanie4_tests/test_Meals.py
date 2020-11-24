@@ -19,6 +19,12 @@ class TestMeal(unittest.TestCase):
         tags = "Pasta,Curry"
         self.assertEqual(self.temp.get_meal_tags('Arrabiata'), tags)
 
+    def test_get_yt_link(self):
+        ytLint = "https://www.youtube.com/watch?v=1IszT_guI08"
+        self.assertEqual(self.temp.get_yt_link('Arrabiata'), ytLint)
+
+
+
 
     def tearDown(self):
         self.temp = None
